@@ -1,5 +1,5 @@
 name = "cloudflare-docker-proxy"
-compatibility_date = "2023-12-01"
+compatibility_date = "2024-12-09"
 
 [dev]
 ip = "0.0.0.0"
@@ -13,13 +13,13 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 [env.production]
 name = "cloudflare-docker-proxy"
 routes = [
-  { pattern = "docker.lixd.xyz", custom_domain = true },
-  { pattern = "quay.lixd.xyz", custom_domain = true },
-  { pattern = "gcr.lixd.xyz", custom_domain = true },
-  { pattern = "k8s-gcr.lixd.xyz", custom_domain = true },
-  { pattern = "k8s.lixd.xyz", custom_domain = true },
-  { pattern = "ghcr.lixd.xyz", custom_domain = true },
-  { pattern = "cloudsmith.lixd.xyz", custom_domain = true },
+  { pattern = "docker.qiudocker.ip-ddns.com", custom_domain = true },
+  { pattern = "quay.qiudocker.ip-ddns.com", custom_domain = true },
+  { pattern = "gcr.qiudocker.ip-ddns.com", custom_domain = true },
+  { pattern = "k8s-gcr.qiudocker.ip-ddns.com", custom_domain = true },
+  { pattern = "k8s.qiudocker.ip-ddns.com", custom_domain = true },
+  { pattern = "ghcr.qiudocker.ip-ddns.com", custom_domain = true },
+  { pattern = "cloudsmith.qiudocker.ip-ddns.com", custom_domain = true },
 ]
 
 [env.production.vars]
@@ -28,7 +28,7 @@ TARGET_UPSTREAM = ""
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
-route = { pattern = "docker-staging.lixd.xyz", custom_domain = true }
+route = { pattern = "docker-staging.qiudocker.ip-ddns.com", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
